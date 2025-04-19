@@ -7,9 +7,8 @@ A premium React application that extracts beautiful color palettes from uploaded
 
 ## Demo
 
-https://github.com/user-attachments/assets/your-video-id-here
+https://github.com/user-attachments/assets/c353a78b-15d5-4242-9cab-700bdb38b098
 
-> **Note**: Replace the URL above with your actual video URL after uploading
 
 ## Features
 
