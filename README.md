@@ -1,8 +1,8 @@
-# Chromatic
+# chromatic
 
-A premium React application that extracts beautiful color palettes from uploaded images.
+A React application that extracts beautiful color palettes from uploaded images.
 
-![Chromatic](https://img.shields.io/badge/version-1.0.0-blue)
+![chromatic](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Demo
