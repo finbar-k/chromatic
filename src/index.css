@@ -1,0 +1,77 @@
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-primary text-text-primary antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus visible styles for better accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-interactive-primary ring-offset-2 ring-offset-background-primary;
+  }
+
+  /* Disable focus styles for mouse users */
+  :focus:not(:focus-visible) {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  /* Reusable component classes */
+  .btn-base {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-all;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-interactive-primary focus-visible:ring-offset-2;
+    @apply disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-interactive-primary text-text-inverse;
+    @apply hover:bg-interactive-primary-hover active:bg-interactive-primary-active;
+  }
+
+  .btn-secondary {
+    @apply btn-base bg-interactive-secondary text-text-primary border border-border-default;
+    @apply hover:bg-interactive-secondary-hover hover:border-border-hover;
+  }
+
+  .card {
+    @apply rounded-xl border border-border-default bg-background-primary;
+    @apply shadow-md;
+  }
+
+  .input-base {
+    @apply w-full rounded-lg border border-border-default bg-background-primary;
+    @apply px-4 py-2 text-text-primary placeholder:text-text-tertiary;
+    @apply transition-colors;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-interactive-primary focus-visible:border-border-focus;
+    @apply disabled:cursor-not-allowed disabled:opacity-50;
+  }
+}
+
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Scrollbar utilities */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
